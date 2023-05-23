@@ -6,7 +6,7 @@
     const {quiz} = defineProps(['quiz']); // While destructuring we have to give the exact same name as defined in defineProps and in the component of the parent where we pass data in the form of argument
     
     const navigateToQuiz = () => {
-        router.push(`/quiz/${quiz.id}`)
+        router.push(`/quiz/${quiz.id}`)// Programmatically navigate to the quiz page
     }
 </script>
 
