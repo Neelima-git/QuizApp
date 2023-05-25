@@ -11,26 +11,29 @@ const { questionStatus, barPercentage } = defineProps([
   <header>
     <h4>Questions answered: {{ questionStatus }}</h4>
     <div class="bar">
-      <div class="completion" :style="{width: barPercentage}" ></div>
+      <div class="completion" :style="{ width: barPercentage }"></div>
     </div>
   </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
   margin-top: 20px;
+
+  h4 {
+    font-size: 30px;
+  }
 }
-header h4 {
-  font-size: 30px;
-}
+
 .bar {
   width: 300px;
   height: 50px;
   border: 3px solid bisque;
-}
-.completion {
-  height: 100%;
-  width: 0%;
-  background-color: bisque;
+
+  .completion {
+    height: 100%;
+    width: 0%;
+    background-color: bisque;
+  }
 }
 </style>

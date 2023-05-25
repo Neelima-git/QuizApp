@@ -5,7 +5,7 @@ const { question } = defineProps(["question"]); // Define the props expected by 
 const emit = defineEmits(["selectOption"]); // Define the emitted event
 
 const emitSelectedOption = (isCorrect) => {
-    emit("selectOption", isCorrect); // Emit the "selectOption" event with the selected option
+  emit("selectOption", isCorrect); // Emit the "selectOption" event with the selected option
 };
 </script>
 
@@ -23,35 +23,41 @@ const emitSelectedOption = (isCorrect) => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .question-container {
   margin-top: 20px;
+
+  .question {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
 }
-.question {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-.option {
-  display: flex;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-.option-label {
-  background-color: bisque;
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.option-value {
-  background-color: rgb(244, 239, 239);
-  width: 50%;
-  height: 50px;
-  font-size: 30px;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
+
+.options-container {
+  .option {
+    display: flex;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    .option-label {
+      background-color: bisque;
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .option-value {
+      background-color: rgb(244, 239, 239);
+      width: 50%;
+      height: 50px;
+      font-size: 30px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 </style>

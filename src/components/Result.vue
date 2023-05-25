@@ -13,15 +13,17 @@
     </div>
 </template>
 
-<style>
-.results{
+<style lang="scss" scoped>
+.results {
     text-align: center;
     padding: 100px 0;
-}
-p{
-    font-size: 25px;
-}
-h1{
-    font-size: 80px;
+
+    p {
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
 }
 </style>

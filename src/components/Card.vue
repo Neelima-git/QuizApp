@@ -1,13 +1,13 @@
 <script setup>
-    import { defineProps } from 'vue';
-    import {useRouter} from "vue-router"
+import { defineProps } from 'vue';
+import { useRouter } from "vue-router";
 
-    const router = useRouter();
-    const {quiz} = defineProps(['quiz']); // While destructuring we have to give the exact same name as defined in defineProps and in the component of the parent where we pass data in the form of argument
-    
-    const navigateToQuiz = () => {
-        router.push(`/quiz/${quiz.id}`)// Programmatically navigate to the quiz page
-    }
+const router = useRouter();
+const { quiz } = defineProps(['quiz']); // While destructuring we have to give the exact same name as defined in defineProps and in the component of the parent where we pass data in the form of argument
+
+const navigateToQuiz = () => {
+    router.push(`/quiz/${quiz.id}`); // Programmatically navigate to the quiz page
+};
 </script>
 
 <template>
@@ -20,28 +20,28 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .card {
-  width: 310px;
-  overflow: hidden;
-  border-radius: 2%;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 35px;
-  margin-right: 20px;
-  cursor: pointer;
-}
+    width: 310px;
+    overflow: hidden;
+    border-radius: 2%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 35px;
+    margin-right: 20px;
+    cursor: pointer;
 
-.card img {
-  width: 100%;
-  height: 190px;
-  margin: 0;
-}
+    img {
+        width: 100%;
+        height: 190px;
+        margin: 0;
+    }
 
-.card .card-text {
-  padding: 0 5px;
+    .card-text {
+        padding: 0 5px;
+
+        h2 {
+            font-weight: bold;
+        }
+    }
 }
-.card .card-text h2 {
-  font-weight: bold;
-}
-    
 </style>
