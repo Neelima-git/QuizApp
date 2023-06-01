@@ -19,7 +19,7 @@
     padding: 100px 0;
 
     p {
-        font-size: 28px;
+        font-size: 25px;
     }
 
     h1 {
